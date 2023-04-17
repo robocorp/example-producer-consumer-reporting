@@ -30,6 +30,11 @@ The robot is split into two tasks, meant to run as separate steps in Control Roo
 - Loop that handles the work items and just creates a logs row for each
   - This simulates random failures to highlight the use of `BUSINESS` -exception type.
 
+### The third task (the reporter)
+
+- checks all process run work items especially related to step 2
+- if all step 2 work items are COMPLETE will set a flag that reporting can be done
+
 ### Local testing
 
 For best experience to test the work items in this example we recommend using [our VS Code extensions](https://robocorp.com/docs/developer-tools/visual-studio-code). With the Robocorp Code extension you can simply run and [select the input work items](https://robocorp.com/docs/developer-tools/visual-studio-code/extension-features#using-work-items) to use, create inputs to simulate error cases and so on.
